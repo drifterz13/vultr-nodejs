@@ -34,6 +34,6 @@ jobs:
         KEY: ${{ secrets.SSHKEY }}
         script: |
           docker pull drifterz13/vultr-nodejs:latest
-          dokku ps:rebuild
+          dokku ps:rebuild vultr-node
 
     
