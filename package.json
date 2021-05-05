@@ -1,0 +1,20 @@
+{
+  "name": "vultr-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/server.js",
+    "dev": "ts-node-dev src/server.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "ts-node-dev": "^1.1.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "typescript": "^4.2.4",
+    "mongoose": "^5.12.7"
+  }
+}

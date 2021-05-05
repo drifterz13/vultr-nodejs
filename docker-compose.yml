@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  server:
+    # image: drifterz13/vultr-nodejs:latest
+    build: .
+    ports:
+      - "80:8000"
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:4.0-xenial
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+
+volumes:
+  mongodb:
