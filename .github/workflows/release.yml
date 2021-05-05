@@ -18,12 +18,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn --frozen-lockfile
 
-    # - name: Push docker image
-    #   uses: docker/login-action@v1
-    #   with:
-    #     username: ${{ secrets.DOCKERHUB_USERNAME }}
-    #     password: ${{ secrets.DOCKERHUB_TOKEN }}
-    # - run: yarn deploy:image
+    - name: Push docker image
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - run: yarn deploy:image
 
     - name: Deploy to Dokku
       uses: appleboy/ssh-action@master
