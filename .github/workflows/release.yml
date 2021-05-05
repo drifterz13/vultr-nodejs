@@ -32,5 +32,8 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
-        script: dokku git:from-image vultr-node drifterz13/vultr-nodejs:latest
+        script: |
+        docker pull drifterz13/vultr-nodejs:latest
+        dokku ps:rebuild
+
     

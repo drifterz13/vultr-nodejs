@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 8000;
 //   .catch((err) => console.error(err));
 
 app.get("/", (req, res) => {
-  res.send("Hello world! 🌐🌎🚀");
+  res.send("Hello world! 🌎🚀🌖");
 });
 
 app.listen(PORT, () => {
