@@ -22,7 +22,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.get("/", (req, res) => {
-  res.send("Hello world! 🌎🚀🌖🌱");
+  res.send("Hello from Vultr-node app! 🌎🚀🌖🌱");
 });
 
 app.use("/notes", noteRoutes);
